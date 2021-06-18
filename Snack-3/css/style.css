@@ -21,6 +21,10 @@ ul:last-child {
     border-bottom: 1px solid black;
 }
 
+.bg-yellow {
+    background-color: yellow;
+}
+
 #forma-tabellare-header li {
     background-color: #eee;
 }

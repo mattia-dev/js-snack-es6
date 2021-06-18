@@ -39,15 +39,44 @@ for (const key in teams[0]) {
         
 }
 
+let foulsCompare = 0;
+
+let majorFoulsTeam;
+
 for (let i = 0; i < teams.length; i++) {
 
     teams[i].points = randomNumbers(1, 30);
     teams[i].fouls = randomNumbers(5, 15);
 
-    let {name, points, fouls} = teams[i];
+    if (teams[i].fouls > foulsCompare) {
 
-    formaTabellare.innerHTML += 
-        `
+        foulsCompare = teams[i].fouls;
+
+        majorFoulsTeam = teams[i];
+
+    }
+
+}
+
+for (let i = 0; i < teams.length; i++) {
+    
+    let { name, points, fouls } = teams[i];
+
+    if (teams[i] === majorFoulsTeam) {
+
+        formaTabellare.innerHTML +=
+            `
+        <ul class="bg-yellow">
+            <li>${name}</li>
+            <li>${points}</li>
+            <li>${fouls}</li>
+        </ul>
+        `;
+        
+    } else {
+
+        formaTabellare.innerHTML +=
+            `
         <ul>
             <li>${name}</li>
             <li>${points}</li>
@@ -55,4 +84,6 @@ for (let i = 0; i < teams.length; i++) {
         </ul>
         `;
 
+    }
+    
 }

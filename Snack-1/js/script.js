@@ -21,7 +21,7 @@
 
 // var weightCompare = bikes[0].weight;
 
-// var index = 0;
+// var minorWeightBike;
 
 // for (var i = 0; i < bikes.length; i++) {
     
@@ -29,15 +29,13 @@
         
 //         weightCompare = bikes[i].weight;
 
-//         index = i;
+//         minorWeightBike = bikes[i];
 
 //     }
     
 // }
 
-// var {name, weight} = bikes[index];
-
-// console.log(`La bici con il peso minore si chiama ${name} e pesa ${weight}kg.`);
+// console.log("La bici con il peso minore si chiama " + minorWeightBike.name + " e pesa " + minorWeightBike.weight + "kg.");
 
 // ES6 version
 const bikes = [
@@ -55,22 +53,22 @@ const bikes = [
     }
 ];
 
-let weightCompare = bikes[0].weight;
+let weightCompare;
 
-let index = 0;
+let minorWeightBike;
 
 for (let i = 0; i < bikes.length; i++) {
 
-    if (bikes[i].weight < weightCompare) {
+    if (bikes[i].weight < weightCompare || weightCompare === undefined) {
 
         weightCompare = bikes[i].weight;
 
-        index = i;
+        minorWeightBike = bikes[i];
 
     }
 
 }
 
-let {name, weight} = bikes[index];
+let {name, weight} = minorWeightBike;
 
 console.log(`La bici con il peso minore si chiama ${name} e pesa ${weight}kg.`);
