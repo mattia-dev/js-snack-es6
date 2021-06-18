@@ -19,13 +19,13 @@
 //     }
 // ];
 
-// var weightCompare = bikes[0].weight;
+// var weightCompare;
 
 // var minorWeightBike;
 
 // for (var i = 0; i < bikes.length; i++) {
     
-//     if (bikes[i].weight < weightCompare ) {
+//     if (bikes[i].weight < weightCompare || weightCompare === undefined) {
         
 //         weightCompare = bikes[i].weight;
 
