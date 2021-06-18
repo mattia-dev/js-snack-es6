@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.table {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    border: 1px solid black;
+    border-bottom: none;
+    width: 300px;
+}
+
+ul:last-child {
+    border-bottom: 1px solid black;
+}
+
+#forma-tabellare-header li {
+    background-color: #eee;
+}
+
+li {
+    flex-basis: 100px;
+}
+
+li:not(:last-child) {
+    border-right: 1px solid black;
+}
